@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+
+  <style>
+    p.blue {
+      color: blue;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <p onclick="changeParagraph(this)">first p tag</p>
+  <p onclick="changeParagraph(this)">second p tag</p>
+  <p onclick="changeParagraph(this)">third p tag</p>
+  <p onclick="changeParagraph(this)">fourth p tag</p>
+
+  <button onclick="styleAllParagraphs()">Make it Blue</button>
+
+  <script>
+    function changeParagraph(bacon) {
+      bacon.classList.toggle('red');
+    }
+    function styleAllParagraphs() {
+      var pTags = document.querySelectorAll('p');
+      pTags.forEach(function(pTag) {
+        pTag.classList.toggle('blue');
+      });
+    }
+  </script>
+</body>
+</html>

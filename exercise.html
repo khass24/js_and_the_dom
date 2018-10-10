@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+
+  <style>
+    p.complete {
+      text-decoration: line-through;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+
+  </style>
+</head>
+<body>
+  <p onclick="completeTodo(this)">Pay bills</p>
+  <p onclick="completeTodo(this)">Wash car</p>
+  <p onclick="completeTodo(this)">Get laundry</p>
+
+  <button onclick="hideCompletedTasks()">Hide completed tasks</button>
+
+  <script>
+
+    function completeTodo(strike) {
+      strike.classList.toggle('complete');
+    }
+
+    function hideCompletedTasks() {
+      var pTags = document.querySelectorAll(".complete");
+      pTags.forEach(function(pTag) {
+        pTag.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
