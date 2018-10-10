@@ -9,7 +9,7 @@
     }
 
     .hidden {
-      visibility: hidden;
+      display: none;
     }
 
   </style>
@@ -28,9 +28,9 @@
     }
 
     function hideCompletedTasks() {
-      var pTags = document.querySelectorAll(".complete");
-      pTags.forEach(function(pTag) {
-        pTag.classList.toggle('hidden');
+      var completedTasks = document.querySelectorAll(".complete");
+      completedTasks.forEach(function(completedTask) {
+        completedTask.classList.toggle('hidden');
       });
     }
   </script>
